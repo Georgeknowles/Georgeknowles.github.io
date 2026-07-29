@@ -39,7 +39,7 @@
   .navlinks a{ transition:color .2s;}
   .navlinks a:hover{ color:var(--ink);}
 
-  .hero{ max-width:760px; margin:0 auto; padding:140px 24px 110px;}
+  .hero{ max-width:760px; margin:0 auto; padding:120px 24px 96px;}
   .avail{
     font-size:12px; color:var(--accent);
     letter-spacing:0.04em; margin-bottom:22px;
@@ -52,7 +52,7 @@
   .section-label{
     max-width:1080px; margin:0 auto; padding:0 24px;
     font-size:12px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.1em;
-    margin-top:130px; margin-bottom:36px;
+    margin-top:108px; margin-bottom:36px;
   }
 
   .project{ max-width:1080px; margin:0 auto; padding:0 24px 96px;}
@@ -106,11 +106,13 @@
     background:rgba(250,250,248,0.85); padding:4px 8px; z-index:5;
   }
   .ss-caption{
-    position:absolute; left:0; right:0; bottom:0;
-    padding:34px 20px 14px;
-    background:linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0));
-    color:#fff; font-size:13px;
+    position:absolute; left:16px; right:16px; bottom:16px;
+    padding:6px 10px;
+    background:rgba(12,13,14,0.78);
+    color:#fff; font-size:12.5px;
     z-index:4;
+    width:fit-content; max-width:calc(100% - 32px);
+    border-radius:2px;
   }
 
   .project-body{
@@ -121,6 +123,7 @@
   .project-body .year{ display:block; font-size:13px; color:var(--ink-soft); margin-top:4px; font-family:'IBM Plex Mono',monospace;}
   .project-body .brief{ color:var(--ink-soft); font-size:15.5px; max-width:560px;}
   .meta{ margin-top:16px; font-size:12.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .eyebrow{ font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:var(--accent); text-transform:uppercase; margin-bottom:8px;}
   .placeholder{color:#B8763F; font-style:italic;}
   .divider{ max-width:1080px; margin:0 auto; height:1px; background:var(--line);}
 
@@ -211,7 +214,7 @@
 </nav>
 
 <section class="hero">
-  <div class="avail">Open to Fall 2026 internships &amp; full-time roles</div>
+  <div class="avail">Open to full-time industrial design roles</div>
   <h1>Industrial designer working across furniture, product systems, and mechanisms.</h1>
   <p>From early sketch to working prototype — I like solving problems that end up in your hands.</p>
 </section>
@@ -221,10 +224,10 @@
 <section class="project">
   <div class="slideshow" data-project="huzfood"></div>
   <div class="project-body">
-    <div><h3>Food Organizing System<span class="year">2024</span></h3></div>
+    <div><div class="eyebrow">Studio Project</div><h3>Food Organizing System<span class="year">2024</span></h3></div>
     <div>
-      <p class="brief">Shared refrigerators can get chaotic and disorganized. This project aims to fix that problem. Early prototypes used off-the-shelf suction cups to mount the barrier to glass shelves, but they didn't hold up over time — so I designed my own mechanical suction cups for extra grip and durability.</p>
-      <div class="meta">PLA, Polypropylene, Rubber · Designing in Context Studio · Senior</div>
+      <p class="brief">Developed for a studio investigating housing and mobility — renting itself is the mobility angle — this project tackles a familiar roommate problem: shared refrigerators that get disorganized fast, continuing a space-saving interest from that fall's transforming chair project. The result is a portable divider system that keeps each person's section separate, uses adjustable clips to fit different fridge depths, and packs up to move with you between apartments. Early prototypes relied on off-the-shelf suction cups, which lost their grip within a day, so I designed a custom mechanical suction mechanism to hold the divider firmly in place long-term.</p>
+      <div class="meta">PLA, Polypropylene, Rubber · Context &amp; Mobility Studio · Senior</div>
     </div>
   </div>
 </section>
@@ -233,9 +236,9 @@
 <section class="project">
   <div class="slideshow" data-project="om"></div>
   <div class="project-body">
-    <div><h3>Meditation Productivity App<span class="year">2023</span></h3></div>
+    <div><div class="eyebrow">Internship</div><h3>Meditation Productivity Device<span class="year">2023</span></h3></div>
     <div>
-      <p class="brief">A smart device for office workers. I explored several desk-ornament concepts for communicating with a companion meditation app, and landed on a piezo speaker design that plays impromptu guided-meditation audio while surfacing visual data from the app.</p>
+      <p class="brief">Designed during a UX/UI and industrial design internship at Dell, this concept was built to pitch a wellness-driven productivity tool to company executives. I explored a wide range of desk-ornament forms — including a flower whose petals wilt if you skip meditating, and a jellybean jar that fills up with your streak — before landing on a piezo-speaker design that plays short guided meditations and visualizes progress from a companion app. I designed the app's core UI (weekly schedule, streak tracking, guided-session library) and pitched the concept to Dell's leadership through a fully illustrated user-story comic.</p>
       <div class="meta">Conceptual Product · Dell User Experience · Intern</div>
     </div>
   </div>
@@ -245,9 +248,9 @@
 <section class="project">
   <div class="slideshow" data-project="seet"></div>
   <div class="project-body">
-    <div><h3>Convertible Decoration Seating<span class="year">2023–2024</span></h3></div>
+    <div><div class="eyebrow">Studio Project</div><h3>Convertible Decoration Seating<span class="year">2023–2024</span></h3></div>
     <div>
-      <p class="brief">Side chair that transforms into wall art to save space. The seat pan was originally a molded shell, but early prototypes weren't comfortable for a long sit — I switched to a felt pad, which added cushioning while keeping the low profile the design required.</p>
+      <p class="brief">A side chair that folds flat into a wall-mounted painting to save space in small apartments. Early prototypes used a solid carved seat pan, which proved too heavy and uncomfortable for extended sitting. I redesigned the seat as a hollow frame inspired by a stretched canvas, added 3D-printed joints to attach the back legs, and used a wool-felt pad to keep the profile low while adding comfort. The front is hand-painted, so when folded, the piece reads as a framed painting with almost no visible seam.</p>
       <div class="meta">Cedar, Poplar, Titanium, Oil Paint · Furniture Studio · Senior</div>
     </div>
   </div>
@@ -257,9 +260,9 @@
 <section class="project">
   <div class="slideshow" data-project="drumplus"></div>
   <div class="project-body">
-    <div><h3>Hands-On Educational Music Kit<span class="year">2023</span></h3></div>
+    <div><div class="eyebrow">Studio Project</div><h3>Hands-On Educational Music Kit<span class="year">2023</span></h3></div>
     <div>
-      <p class="brief">Teaching the science of music to older elementary aged kids. What began as a build-your-own-instrument toy kit grew into something more — I added a pamphlet breaking down the basic science of how each instrument produces sound.</p>
+      <p class="brief">A STEAM kit teaching upper-elementary kids the science of music through instruments they build themselves: a tunable PVC flute, fillable shaker eggs, claves cut to different lengths to demonstrate how size affects pitch, and a frame drum made from wood, goat skin, and glue. An illustrated instruction booklet walks kids through assembly and breaks down concepts like rhythm, tone, and pitch. User testing with real kids surfaced specific, useful feedback — inconsistent shaker-egg tension, confusing assembly steps — that reinforced how much early testing shapes a design meant for a very particular age group.</p>
       <div class="meta">Wood, Cardboard, PVC · STEAM Box Studio · Senior</div>
     </div>
   </div>
@@ -269,9 +272,9 @@
 <section class="project">
   <div class="slideshow" data-project="mechhand"></div>
   <div class="project-body">
-    <div><h3>Analog Stylized Prosthetic<span class="year">2022</span></h3></div>
+    <div><div class="eyebrow">Studio Project</div><h3>Analog Stylized Prosthetic<span class="year">2022</span></h3></div>
     <div>
-      <p class="brief">Linkages allow passive dynamic grip for transradial amputees. The palm element was originally a solid volume; after experimenting with a simpler planar profile, I found it performed the same function with less material and complexity.</p>
+      <p class="brief">Out of a wide-ranging ideation phase — acrobatic prosthetic legs, stilt attachments, a webbed hand for swimming — a mechanical finger concept stood out and became the focus: a passive, linkage-driven prosthetic hand for transradial amputees. What I expected would require 5-axis CNC machining turned out to be achievable almost entirely with 2D laser-cut components, proven first with a wire-and-foamcore prototype. The final design uses laser-cut stainless steel for nearly every structural element, with a few milled parts and rubber fingertip pads. I also simplified the palm from a solid volume to a planar profile, cutting material and complexity without losing function.</p>
       <div class="meta">Stainless Steel · Prosthetics Studio · Junior</div>
     </div>
   </div>
@@ -281,9 +284,10 @@
 <section class="project">
   <div class="slideshow" data-project="additional"></div>
   <div class="project-body">
-    <div><h3>Bernardo Urbina Internship<span class="year">2026 </span></h3></div>
+    <div><div class="eyebrow">Internship</div><h3>Bernardo Urbina Internship<span class="year">2026</span></h3></div>
     <div>
-      <p class="brief">During my internship with Bernardo Urbina, I iterated on several chair concepts — refining each for comfort, aesthetic, and manufacturability. I initially wanted to go for something sculptural and biomorphic, but Bernardo pushed me to find a more subtle form language.</p>
+      <p class="brief">Interning with furniture designer Bernardo Urbina in Costa Rica, I learned to operate a CNC router and helped build components for his shop while developing speculative chair concepts for potential production. My early direction leaned sculptural and biomorphic, shaped in part with Fusion 360's generative design tools, but the geometry was too complex for the shop's 2.5-axis CNC. I simplified and restyled the form to align with Bernardo's design language while keeping it manufacturable — building real fluency in parametric modeling and CNC-informed design along the way.</p>
+      <div class="meta">Speculative Furniture · Bernardo Urbina Design · Intern</div>
     </div>
   </div>
 </section>
@@ -291,7 +295,7 @@
 <div class="section-label" id="about">About</div>
 <section class="about">
   <p>I like devising practical, but creative solutions to design problems. Working at a custom furniture shop taught me to be creative, but always design for the client first.</p>
-  <p>Spring 2024 Graduate</p>
+  <p class="meta">Bachelor of Industrial Design, Pratt Institute — 2024</p>
   <div class="tools">
     <span>Rhino</span>
     <span>SolidWorks</span>
@@ -300,13 +304,14 @@
     <span>Woodshop</span>
     <span>3D Printing</span>
   </div>
-  <a class="btn" href="https://georgeknowles.github.io/George_Knowles_Resume_designwebsite.pdf" target="_blank">Download Résumé (PDF)</a>
+  <a class="btn" href="George_Knowles_Resume_designwebsite.pdf" target="_blank">Download Résumé (PDF)</a>
 </section>
 
 <section class="contact" id="contact">
-  <h2>Let's talk about fall.</h2>
+  <h2>Let's talk about what's next.</h2>
   <div class="contact-links">
     <a href="mailto:gwknowles11@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/george-knowles-647425241/" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 </section>
 
@@ -361,60 +366,58 @@
 <script>
   const PROJECT_IMAGES = {
     huzfood: [
-      { src: "https://georgeknowles.github.io/huzfood_1.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/huzfood_2.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/huzfood_3.jpg", caption: "Placing the models in context to judge form factor." },
-      { src: "https://georgeknowles.github.io/huzfood_4.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/huzfood_5.jpg", caption: "Corrugated plastic material allows for easy assembly." },
-      { src: "https://georgeknowles.github.io/huzfood_6.jpg", caption: "A special labeling system gives the design a cleaner look." },
-      { src: "https://georgeknowles.github.io/huzfood_7.jpg", caption: "Mechanical suction cups stay in place longer than regular suction cups." },
-      { src: "https://georgeknowles.github.io/huzfood_8.jpg", caption: "" }
+      { src: "huzfood_1.jpg", caption: "" },
+      { src: "huzfood_8_wide.jpg", caption: "The divider expands and contracts to fit different fridge depths." },
+      { src: "huzfood_2.jpg", caption: "" },
+      { src: "huzfood_3.jpg", caption: "Early cardboard mockup with color-coded labels, tested in a real refrigerator." },
+      { src: "huzfood_5.jpg", caption: "Corrugated plastic material allows for easy assembly.", focus: "center 85%" },
+      { src: "huzfood_6.jpg", caption: "A special labeling system gives the design a cleaner look." }
     ],
     om: [
-      { src: "https://georgeknowles.github.io/om_1.jpg", caption: "Audio-visual ornament." },
-      { src: "https://georgeknowles.github.io/om_2.jpg", caption: "Mobile app interface." },
-      { src: "https://georgeknowles.github.io/om_3.jpg", caption: "User story comic." },
-      { src: "https://georgeknowles.github.io/om_4.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/om_5.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/om_6.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/om_7.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/om_8.jpg", caption: "Visual ideation." }
+      { src: "om_1.jpg", caption: "Audio-visual ornament.", fit: "contain" },
+      { src: "om_2.jpg", caption: "Mobile app interface." },
+      { src: "om_3.jpg", caption: "User story comic, pitched directly to Dell's leadership team.", fit: "contain" },
+      { src: "om_4.jpg", caption: "Comic, page 1 — establishing the productivity problem.", fit: "contain" },
+      { src: "om_5.jpg", caption: "Comic, page 2 — walking through the app's onboarding and session flow.", fit: "contain" },
+      { src: "om_6.jpg", caption: "Comic, page 3 — explaining the meditation-streak reward system.", fit: "contain" },
+      { src: "om_7.jpg", caption: "Comic, page 4 — resolution.", fit: "contain" },
+      { src: "om_8.jpg", caption: "Early ideation across dozens of desk-ornament concepts.", fit: "contain" }
     ],
     seet: [
-      { src: "https://georgeknowles.github.io/seet_1.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/seet_2.jpg", caption: "Front view, folded." },
-      { src: "https://georgeknowles.github.io/seet_3.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/seet_4.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/seet_5.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/seet_6.jpg", caption: "Functional ergonomic model." },
-      { src: "https://georgeknowles.github.io/seet_7.jpg", caption: "Internal frame structure." },
-      { src: "https://georgeknowles.github.io/seet_8.jpg", caption: "" }
+      { src: "seet_1.jpg", caption: "" },
+      { src: "seet_2.jpg", caption: "Front view, folded." },
+      { src: "seet_3.jpg", caption: "" },
+      { src: "seet_4.jpg", caption: "" },
+      { src: "seet_5.jpg", caption: "" },
+      { src: "seet_6.jpg", caption: "Functional ergonomic model." },
+      { src: "seet_7.jpg", caption: "Internal frame structure." },
+      { src: "seet_8.jpg", caption: "" }
     ],
     drumplus: [
-      { src: "https://georgeknowles.github.io/drum+_1.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/drum+_2.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/drum+_3.jpg", caption: "Color illustrations elevated the instructional pamphlet." },
-      { src: "https://georgeknowles.github.io/drum+_4.jpg", caption: "User testing with an after school program." },
-      { src: "https://georgeknowles.github.io/drum+_5.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/drum+_6.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/drum+_7.jpg", caption: "Early prototypes exploring materials and textures." },
-      { src: "https://georgeknowles.github.io/drum+_8.jpg", caption: "Component ideation." }
+      { src: "drum+_1.jpg", caption: "" },
+      { src: "drum+_2.jpg", caption: "" },
+      { src: "drum+_3.jpg", caption: "Color illustrations elevated the instructional pamphlet." },
+      { src: "drum+_4.jpg", caption: "User testing with an after school program." },
+      { src: "drum+_5.jpg", caption: "" },
+      { src: "drum+_6.jpg", caption: "" },
+      { src: "drum+_7.jpg", caption: "Early prototypes exploring materials and textures." },
+      { src: "drum+_8.jpg", caption: "Component ideation." }
     ],
     mechhand: [
-      { src: "https://georgeknowles.github.io/mechhand_1.jpg", caption: "An exploded view of the mechanism." },
-      { src: "https://georgeknowles.github.io/mechhand_2.jpg", caption: "Mostly laser cut components." },
-      { src: "https://georgeknowles.github.io/mechhand_3.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/mechhand_4.jpg", caption: "Early demonstration of adaptive grip." },
-      { src: "https://georgeknowles.github.io/mechhand_5.jpg", caption: "Form exploration." },
-      { src: "https://georgeknowles.github.io/mechhand_6.jpg", caption: "Ideation models." }
+      { src: "mechhand_1.jpg", caption: "An exploded view of the mechanism." },
+      { src: "mechhand_2.jpg", caption: "Mostly laser cut components." },
+      { src: "mechhand_3.jpg", caption: "" },
+      { src: "mechhand_4.jpg", caption: "Early demonstration of adaptive grip." },
+      { src: "mechhand_5.jpg", caption: "Form exploration." },
+      { src: "mechhand_6.jpg", caption: "Ideation models." }
     ],
     additional: [
-      { src: "https://georgeknowles.github.io/addimages_1.jpg", caption: "Chunky side chair." },
-      { src: "https://georgeknowles.github.io/addimages_2.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/addimages_3.jpg", caption: "Flat pack mid century chair." },
-      { src: "https://georgeknowles.github.io/addimages_4.jpg", caption: "" },
-      { src: "https://georgeknowles.github.io/addimages_5.jpg", caption: "Organic cane side chair." },
-      { src: "https://georgeknowles.github.io/addimages_6.jpg", caption: "" }
+      { src: "addimages_1.jpg", caption: "Chunky side chair." },
+      { src: "addimages_2.jpg", caption: "" },
+      { src: "addimages_3.jpg", caption: "Flat pack mid century chair." },
+      { src: "addimages_4.jpg", caption: "" },
+      { src: "addimages_5.jpg", caption: "Organic cane side chair." },
+      { src: "addimages_6.jpg", caption: "" }
     ]
   };
 
@@ -428,7 +431,7 @@
     let current = 0;
     const slidesHTML = images.map((img,i)=>
       `<div class="slide${i===0?' active':''}">
-        <img src="${img.src}" alt="${key} image ${i+1}">
+        <img src="${img.src}" alt="${key} image ${i+1}" style="object-position:${img.focus || 'center'}; object-fit:${img.fit || 'cover'};">
         ${img.caption ? `<div class="ss-caption">${img.caption}</div>` : ''}
       </div>`
     ).join('');
