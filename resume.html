@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>George Knowles — Résumé</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAFAF8;
+    --ink:#16181A;
+    --ink-soft:#6B6F72;
+    --line:#DEDEDA;
+    --accent:#1F4E8C;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:10.3px;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    width:8.5in;
+    padding:0.55in 0.65in;
+  }
+  h1,h2,h3{ font-family:'Space Grotesk', sans-serif; letter-spacing:-0.01em;}
+  .mono{ font-family:'IBM Plex Mono', monospace; letter-spacing:0.02em;}
+
+  header{ display:flex; justify-content:space-between; align-items:flex-end; padding-bottom:14px; border-bottom:1px solid var(--line); margin-bottom:20px;}
+  h1{ font-size:26px; font-weight:700; line-height:1;}
+  .contact{ font-family:'IBM Plex Mono',monospace; font-size:9px; color:var(--ink-soft); text-align:right; line-height:1.6;}
+  .contact a{ color:var(--ink-soft); text-decoration:none;}
+
+  .section{ margin-bottom:16px;}
+  .section-label{
+    font-family:'IBM Plex Mono',monospace; font-size:9.5px; color:var(--accent);
+    text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;
+    display:flex; align-items:center; gap:6px;
+  }
+  .section-label::before{ content:""; width:5px; height:5px; background:var(--accent); display:inline-block;}
+
+  .entry{ margin-bottom:9px;}
+  .entry-head{ display:flex; justify-content:space-between; align-items:baseline; gap:12px;}
+  .entry-title{ font-weight:600; font-size:11px;}
+  .entry-sub{ color:var(--ink-soft); font-size:9.8px; margin-top:1px;}
+  .entry-date{ font-family:'IBM Plex Mono',monospace; font-size:9px; color:var(--ink-soft); white-space:nowrap;}
+  ul{ margin:4px 0 0 14px; padding:0;}
+  li{ margin-bottom:2px; font-size:9.8px;}
+
+  .skills{ display:flex; flex-wrap:wrap; gap:6px;}
+  .skills span{ font-family:'IBM Plex Mono',monospace; font-size:9px; border:1px solid var(--line); padding:3px 8px; border-radius:2px; color:var(--ink);}
+
+  .two-col{ display:flex; gap:32px;}
+  .two-col > div{ flex:1;}
+
+  @page{ size:letter; margin:0; }
+  @media print{
+    body{ width:auto; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>George Knowles</h1>
+  <div class="contact">
+    gwknowles11@gmail.com · 919.609.8682<br>
+    Raleigh, NC 27606<br>
+    linkedin.com/in/george-knowles-647425241
+  </div>
+</header>
+
+<div class="section">
+  <div class="section-label">Education</div>
+  <div class="entry">
+    <div class="entry-head">
+      <div>
+        <div class="entry-title">Bachelor of Industrial Design</div>
+        <div class="entry-sub">Pratt Institute — Brooklyn, NY</div>
+      </div>
+      <div class="entry-date">05/2024</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Experience</div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div>
+        <div class="entry-title">Industrial Design Intern</div>
+        <div class="entry-sub">Bernardo Urbina Design — Tilarán, Costa Rica</div>
+      </div>
+      <div class="entry-date">06/2026 – Current</div>
+    </div>
+    <ul>
+      <li>Operated a CNC router to fabricate sculptural furniture from a self-led project plan.</li>
+      <li>Developed speculative chair concepts in Fusion 360, balancing sculptural form with manufacturability on a 2.5-axis CNC.</li>
+      <li>Built fluency in parametric modeling and CNC-informed design through hands-on fabrication.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div>
+        <div class="entry-title">CAD Designer</div>
+        <div class="entry-sub">Self Employed — Raleigh, NC</div>
+      </div>
+      <div class="entry-date">04/2025 – Current</div>
+    </div>
+    <ul>
+      <li>Iterated residential deck mockups from project briefs, site photos, and blueprints.</li>
+      <li>Drafted 2D and 3D CAD to support sales and construction.</li>
+      <li>Coordinated client requests and feedback with the company manager to keep projects on track.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div>
+        <div class="entry-title">CAD Designer</div>
+        <div class="entry-sub">Oak City Customs — Raleigh, NC</div>
+      </div>
+      <div class="entry-date">08/2024 – 04/2025</div>
+    </div>
+    <ul>
+      <li>Guided clients from pen-and-paper sketches to production-ready renderings.</li>
+      <li>Coordinated design goals with shop capabilities to optimize product value.</li>
+      <li>Drafted CNC CAD for custom commercial furniture and architectural elements.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div>
+        <div class="entry-title">Experience Designer, MART NeoCon Display</div>
+        <div class="entry-sub">Pratt Institute — Brooklyn, NY</div>
+      </div>
+      <div class="entry-date">01/2024 – 05/2024</div>
+    </div>
+    <ul>
+      <li>Collaborated on a multisensory walkthrough exhibition integrating print, sound, and projection within modular, reusable elements.</li>
+      <li>Combined expertise from interactive technology and interior design students under faculty creative direction.</li>
+      <li>Built mockups for modular projection supports using SolidWorks CAD.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div>
+        <div class="entry-title">UX Design Intern</div>
+        <div class="entry-sub">Dell — Austin, TX</div>
+      </div>
+      <div class="entry-date">05/2023 – 08/2023</div>
+    </div>
+    <ul>
+      <li>Led an independent project developing a meditation-assistant concept from research through storyboard development.</li>
+      <li>Coordinated meetings, tracked milestones, and maintained project management tools.</li>
+      <li>Illustrated product use cases through an original comic.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="two-col">
+  <div class="section">
+    <div class="section-label">Skills</div>
+    <div class="skills">
+      <span>Rhino</span>
+      <span>SolidWorks</span>
+      <span>KeyShot</span>
+      <span>Fusion 360</span>
+      <span>Woodshop</span>
+      <span>3D Printing</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Volunteer Work</div>
+    <div class="entry">
+      <div class="entry-title" style="font-size:9.8px;">1776 Sound Board — Raleigh Little Theater</div>
+      <ul><li>Troubleshot transmission issues and equalized audio levels throughout performances.</li></ul>
+    </div>
+    <div class="entry">
+      <div class="entry-title" style="font-size:9.8px;">Art Walk Volunteer — Art Space</div>
+      <ul><li>Hosted self-directed painting activities for event patrons.</li></ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
