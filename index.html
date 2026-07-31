@@ -54,15 +54,33 @@
   .navlinks a{ transition:color .2s;}
   .navlinks a:hover{ color:var(--ink);}
 
-  .hero{ max-width:760px; margin:0 auto; padding:120px 24px 96px;}
+  .hero{
+    max-width:1080px; margin:0 auto; padding:88px 24px 96px;
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;
+  }
   .avail{
     font-size:12px; color:var(--accent);
     letter-spacing:0.04em; margin-bottom:22px;
     display:flex; align-items:center; gap:8px;
   }
   .avail::before{ content:""; width:6px; height:6px; border-radius:50%; background:var(--accent); display:inline-block;}
-  .hero h1{ font-size:clamp(38px, 6vw, 60px); line-height:1.08;}
-  .hero p{ margin-top:22px; font-size:18px; color:var(--ink-soft); max-width:520px;}
+  .hero h1{ font-size:clamp(34px, 4.6vw, 52px); line-height:1.1;}
+  .hero p{ margin-top:22px; font-size:18px; color:var(--ink-soft); max-width:480px;}
+  .hero-photo{
+    width:100%; aspect-ratio:4/5; overflow:hidden; background:var(--line);
+  }
+  .hero-photo img{
+    width:100%; height:100%; object-fit:cover; object-position:60% 30%;
+    filter:grayscale(70%) contrast(1.01);
+    transition:filter .6s ease;
+    display:block;
+  }
+  .hero-photo:hover img{ filter:grayscale(0%); }
+
+  @media (max-width:900px){
+    .hero{ grid-template-columns:1fr; gap:36px; }
+    .hero-photo{ aspect-ratio:16/10; order:-1; }
+  }
 
   .section-label{
     max-width:1080px; margin:0 auto; padding:0 24px;
@@ -92,7 +110,7 @@
     grid-row:span 2;
   }
   .g-tile img{
-    width:100%; height:100%; object-fit:cover;
+    width:100%; height:100%; object-fit:contain;
     filter:grayscale(70%) contrast(1.01);
     transition:filter .4s ease, transform .4s ease;
     display:block;
@@ -101,12 +119,10 @@
   .g-cap{
     position:absolute; left:0; right:0; bottom:0;
     padding:16px 10px 8px;
-    background:linear-gradient(to top, rgba(12,13,14,0.82), rgba(12,13,14,0));
+    background:linear-gradient(to top, rgba(12,13,14,0.82), rgba(12,13,14,0.05));
     color:#fff; font-size:11.5px; line-height:1.35;
-    opacity:0; transition:opacity .25s ease;
     pointer-events:none;
   }
-  .g-tile:hover .g-cap{ opacity:1;}
   .g-empty{
     grid-column:1/-1;
     display:flex; align-items:center; justify-content:center;
@@ -120,10 +136,41 @@
   .project-body h3{ font-size:24px;}
   .project-body .year{ display:block; font-size:13px; color:var(--ink-soft); margin-top:4px; font-family:'IBM Plex Mono',monospace;}
   .project-body .brief{ color:var(--ink-soft); font-size:15.5px; max-width:560px;}
+  .craft{
+    margin-top:20px; padding-left:16px; max-width:540px;
+    border-left:3px solid var(--accent);
+    font-size:16.5px; font-weight:600; color:var(--ink);
+  }
   .meta{ margin-top:16px; font-size:12.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
   .eyebrow{ font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:var(--accent); text-transform:uppercase; margin-bottom:8px;}
   .placeholder{color:#B8763F; font-style:italic;}
   .divider{ max-width:1080px; margin:0 auto; height:1px; background:var(--line);}
+
+  .project-compact{ max-width:1080px; margin:0 auto; padding:0 24px 72px;}
+  .compact-body{ display:grid; grid-template-columns:260px 1fr; gap:40px; align-items:start;}
+  .compact-photo{
+    width:100%; aspect-ratio:4/3; overflow:hidden; background:var(--line); cursor:zoom-in;
+  }
+  .compact-photo img{
+    width:100%; height:100%; object-fit:cover;
+    filter:grayscale(70%) contrast(1.01);
+    transition:filter .4s ease;
+    display:block;
+  }
+  .compact-photo:hover img{ filter:grayscale(0%);}
+  .compact-body h3{ font-size:20px;}
+  .compact-body .year{ display:block; font-size:12.5px; color:var(--ink-soft); margin-top:3px; font-family:'IBM Plex Mono',monospace;}
+  .compact-body .brief{ color:var(--ink-soft); font-size:14.5px; max-width:480px;}
+  .compact-more{
+    margin-top:14px; display:inline-block; width:fit-content;
+    font-size:12.5px; color:var(--accent); border-bottom:1px solid var(--accent);
+    padding-bottom:2px; cursor:pointer; font-family:'IBM Plex Mono',monospace;
+  }
+
+  @media (max-width:760px){
+    .compact-body{ grid-template-columns:1fr; gap:16px;}
+    .compact-photo{ aspect-ratio:16/10;}
+  }
 
   @media (max-width:760px){
     .project-body{ grid-template-columns:1fr; gap:12px;}
@@ -138,9 +185,9 @@
   .tools span{ font-family:'IBM Plex Mono',monospace; font-size:11.5px; border:1px solid var(--line); padding:6px 12px; border-radius:2px;}
   .btn{ display:inline-block; margin-top:28px; border-bottom:1px solid var(--ink); padding-bottom:3px; font-size:14px; font-weight:500;}
 
-  .contact{ max-width:760px; margin:0 auto; padding:60px 24px 140px;}
-  .contact h2{ font-size:34px; max-width:420px;}
-  .contact-links{ display:flex; gap:28px; margin-top:28px; font-size:15px;}
+  .contact{ max-width:760px; margin:0 auto; padding:96px 24px 160px;}
+  .contact h2{ font-size:clamp(32px, 5vw, 54px); line-height:1.12; max-width:560px;}
+  .contact-links{ display:flex; gap:32px; margin-top:36px; font-size:17px; font-weight:500;}
   .contact-links a{ border-bottom:1px solid var(--ink); padding-bottom:2px;}
 
   footer{ text-align:center; padding:28px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; border-top:1px solid var(--line);}
@@ -212,20 +259,28 @@
 </nav>
 
 <section class="hero">
-  <div class="avail">Open to industrial design internships and full-time roles</div>
-  <h1>Industrial designer working across furniture, product systems, and mechanisms.</h1>
-  <p>From early sketch to working prototype — I like solving problems that end up in your hands.</p>
+  <div>
+    <div class="avail">Open to industrial design internships and full-time roles</div>
+    <h1>Industrial designer working across furniture, product systems, and mechanisms.</h1>
+    <p>From early sketch to working prototype — I like solving problems that end up in your hands.</p>
+  </div>
+  <div class="hero-photo">
+    <img src="george-at-work.jpg" alt="George at a table saw in the wood shop, guiding a workpiece through a shop-built jig.">
+  </div>
 </section>
 
 <div class="section-label" id="work">Selected Work</div>
 
-<section class="project">
-  <div class="gallery" data-project="om"></div>
-  <div class="project-body">
-    <div><div class="eyebrow">Internship</div><h3>Meditation Productivity Device<span class="year">2023</span></h3></div>
+<section class="project-compact">
+  <div class="compact-body">
+    <div class="compact-photo compact-open" data-project="om">
+      <img src="om_1.jpg" alt="Audio-visual meditation ornament.">
+    </div>
     <div>
-      <p class="brief">Designed during a UX/UI and industrial design internship at Dell, this concept was built to pitch a wellness-driven productivity tool to company executives. I explored a wide range of desk-ornament forms — including a flower whose petals wilt if you skip meditating, and a jellybean jar that fills up with your streak — before landing on a piezo-speaker design that plays short guided meditations and visualizes progress from a companion app. I designed the app's core UI (weekly schedule, streak tracking, guided-session library) and pitched the concept to Dell's leadership through a fully illustrated user-story comic.</p>
+      <div class="eyebrow">Internship</div><h3>Meditation Productivity Device<span class="year">2023</span></h3>
+      <p class="brief">A wellness-driven productivity concept pitched to Dell's leadership: a piezo-speaker ornament paired with a companion app, presented through a fully illustrated user-story comic.</p>
       <div class="meta">Conceptual Product · Dell User Experience · Intern</div>
+      <span class="compact-more compact-open" data-project="om">View all 8 photos →</span>
     </div>
   </div>
 </section>
@@ -237,6 +292,7 @@
     <div><div class="eyebrow">Studio Project</div><h3>Analog Stylized Prosthetic<span class="year">2022</span></h3></div>
     <div>
       <p class="brief">Out of a wide-ranging ideation phase — acrobatic prosthetic legs, stilt attachments, a webbed hand for swimming — a mechanical finger concept stood out and became the focus: a passive, linkage-driven prosthetic hand for transradial amputees. What I expected would require 5-axis CNC machining turned out to be achievable almost entirely with 2D laser-cut components, proven first with a wire-and-foamcore prototype. The final design uses laser-cut stainless steel for nearly every structural element, with a few milled parts and rubber fingertip pads. I also simplified the palm from a solid volume to a planar profile, cutting material and complexity without losing function.</p>
+      <p class="craft">Laser-cut stainless linkage does the work of a motor — no motors required.</p>
       <div class="meta">Stainless Steel · Prosthetics Studio · Junior</div>
     </div>
   </div>
@@ -249,6 +305,7 @@
     <div><div class="eyebrow">Studio Project</div><h3>Food Organizing System<span class="year">2024</span></h3></div>
     <div>
       <p class="brief">Developed for a studio investigating housing and mobility — renting itself is the mobility angle — this project tackles a familiar roommate problem: shared refrigerators that get disorganized fast, continuing a space-saving interest from that fall's transforming chair project. The result is a portable divider system that keeps each person's section separate, uses adjustable clips to fit different fridge depths, and packs up to move with you between apartments. Early prototypes relied on off-the-shelf suction cups, which lost their grip within a day, so I designed a custom mechanical suction mechanism to hold the divider firmly in place long-term.</p>
+      <p class="craft">A custom mechanical suction mechanism — no off-the-shelf hardware needed.</p>
       <div class="meta">PLA, Polypropylene, Rubber · Context &amp; Mobility Studio · Senior</div>
     </div>
   </div>
@@ -261,6 +318,7 @@
     <div><div class="eyebrow">Studio Project</div><h3>Convertible Decoration Seating<span class="year">2023–2024</span></h3></div>
     <div>
       <p class="brief">A side chair that folds flat into a wall-mounted painting to save space in small apartments. Early prototypes used a solid carved seat pan, which proved too heavy and uncomfortable for extended sitting. I redesigned the seat as a hollow frame inspired by a stretched canvas, added 3D-printed joints to attach the back legs, and used a wool-felt pad to keep the profile low while adding comfort. The front is hand-painted, so when folded, the piece reads as a framed painting with almost no visible seam.</p>
+      <p class="craft">A hollow, canvas-inspired frame replaces a solid carved seat — half the weight, all the comfort.</p>
       <div class="meta">Cedar, Poplar, Titanium, Oil Paint · Furniture Studio · Senior</div>
     </div>
   </div>
@@ -273,19 +331,23 @@
     <div><div class="eyebrow">Studio Project</div><h3>Hands-On Educational Music Kit<span class="year">2023</span></h3></div>
     <div>
       <p class="brief">A STEAM kit teaching upper-elementary kids the science of music through instruments they build themselves: a tunable PVC flute, fillable shaker eggs, claves cut to different lengths to demonstrate how size affects pitch, and a frame drum made from wood, goat skin, and glue. An illustrated instruction booklet walks kids through assembly and breaks down concepts like rhythm, tone, and pitch. User testing with real kids surfaced specific, useful feedback — inconsistent shaker-egg tension, confusing assembly steps — that reinforced how much early testing shapes a design meant for a very particular age group.</p>
+      <p class="craft">A tunable PVC flute and hand-cut claves — real instruments, built from hardware-store parts.</p>
       <div class="meta">Wood, Cardboard, PVC · STEAM Box Studio · Senior</div>
     </div>
   </div>
 </section>
 <div class="divider"></div>
 
-<section class="project">
-  <div class="gallery" data-project="additional"></div>
-  <div class="project-body">
-    <div><div class="eyebrow">Internship</div><h3>Bernardo Urbina Internship<span class="year">2026</span></h3></div>
+<section class="project-compact">
+  <div class="compact-body">
+    <div class="compact-photo compact-open" data-project="additional">
+      <img src="addimages_8.png" alt="AI-rendered concept that became the direction for the final chair design.">
+    </div>
     <div>
-      <p class="brief">Interning with furniture designer Bernardo Urbina in Costa Rica, I learned to operate a CNC router and helped build components for his shop while developing speculative chair concepts for potential production. My early direction leaned sculptural and biomorphic, shaped in part with Fusion 360's generative design tools, but the geometry was too complex for the shop's 2.5-axis CNC. I simplified and restyled the form to align with Bernardo's design language while keeping it manufacturable — building real fluency in parametric modeling and CNC-informed design along the way.</p>
+      <div class="eyebrow">Internship</div><h3>Bernardo Urbina Internship<span class="year">2026</span></h3>
+      <p class="brief">Interning with furniture designer Bernardo Urbina in Costa Rica — operating a CNC router, building shop components, and developing speculative chair concepts for potential production.</p>
       <div class="meta">Speculative Furniture · Bernardo Urbina Design · Intern</div>
+      <span class="compact-more compact-open" data-project="additional">View all 8 photos →</span>
     </div>
   </div>
 </section>
@@ -437,7 +499,7 @@
     }
     container.innerHTML = images.map((img,i)=>
       `<div class="g-tile${i===0?' g-hero':''}" data-i="${i}">
-        <img src="${img.src}" alt="${escapeAttr(img.caption || (key + ' image ' + (i+1)))}" loading="lazy" decoding="async" style="object-position:${img.focus || 'center'}; object-fit:${img.fit || 'cover'};">
+        <img src="${img.src}" alt="${escapeAttr(img.caption || (key + ' image ' + (i+1)))}" loading="lazy" decoding="async" style="object-position:${img.focus || 'center'}; object-fit:${img.fit || 'contain'};">
         ${img.caption ? `<div class="g-cap">${img.caption}</div>` : ''}
       </div>`
     ).join('');
@@ -447,6 +509,10 @@
   }
 
   document.querySelectorAll('.gallery').forEach(buildGallery);
+
+  document.querySelectorAll('.compact-open').forEach(el=>{
+    el.addEventListener('click', ()=> openLightbox(el.dataset.project, 0));
+  });
 
   const lightbox = document.getElementById('lightbox');
   const lbImage = document.getElementById('lbImage');
