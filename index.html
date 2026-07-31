@@ -4,6 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>George Knowles — Industrial Design</title>
+<meta name="description" content="Portfolio of George Knowles, an industrial designer working across furniture, product systems, and mechanisms — from early sketch to working prototype.">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://georgeknowles.design/">
+<meta property="og:title" content="George Knowles — Industrial Design">
+<meta property="og:description" content="Portfolio of George Knowles, an industrial designer working across furniture, product systems, and mechanisms — from early sketch to working prototype.">
+<meta property="og:image" content="https://georgeknowles.design/drum+_2.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="George Knowles — Industrial Design">
+<meta name="twitter:description" content="Portfolio of George Knowles, an industrial designer working across furniture, product systems, and mechanisms — from early sketch to working prototype.">
+<meta name="twitter:image" content="https://georgeknowles.design/drum+_2.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -53,7 +68,10 @@
     max-width:1080px; margin:0 auto; padding:0 24px;
     font-size:12px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.1em;
     margin-top:108px; margin-bottom:36px;
+    scroll-margin-top:90px;
   }
+
+  #contact{ scroll-margin-top:90px; }
 
   .project{ max-width:1080px; margin:0 auto; padding:0 24px 96px;}
 
@@ -406,6 +424,10 @@
     ]
   };
 
+  function escapeAttr(str){
+    return str.replace(/&/g,'&amp;').replace(/"/g,'&quot;');
+  }
+
   function buildGallery(container){
     const key = container.dataset.project;
     const images = PROJECT_IMAGES[key] || [];
@@ -415,7 +437,7 @@
     }
     container.innerHTML = images.map((img,i)=>
       `<div class="g-tile${i===0?' g-hero':''}" data-i="${i}">
-        <img src="${img.src}" alt="${key} image ${i+1}" style="object-position:${img.focus || 'center'}; object-fit:${img.fit || 'cover'};">
+        <img src="${img.src}" alt="${escapeAttr(img.caption || (key + ' image ' + (i+1)))}" loading="lazy" decoding="async" style="object-position:${img.focus || 'center'}; object-fit:${img.fit || 'cover'};">
         ${img.caption ? `<div class="g-cap">${img.caption}</div>` : ''}
       </div>`
     ).join('');
